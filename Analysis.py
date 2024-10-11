@@ -48,7 +48,6 @@ sid = SentimentIntensityAnalyzer()
 def calculate_sentiment_score(text):
     return sid.polarity_scores(text)['compound']
     
-df = pd.read_csv('Rejection Data - Sheet1.csv')
 
 #apply SA to each email and add new column for score
 df['SentimentScore'] = df['Email'].apply(calculate_sentiment_score)
