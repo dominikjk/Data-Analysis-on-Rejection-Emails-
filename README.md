@@ -1,27 +1,16 @@
-# 📊 Data Analysis Project
+# Rejection Email Analysis
 
-This project involves end-to-end analysis of a real-world dataset to extract insights, visualise trends, and draw meaningful conclusions.
+A Python analysis of job application emails, comparing rejections with non-rejections to see how companies word bad news.
 
-## 🧰 Tools & Libraries Used
+## What it looks at
 
-- Python 3.x
-- Jupyter Notebook
-- pandas
-- numpy
-- matplotlib
+- **Length**: how long rejection emails are compared with other replies
+- **Lexical richness**: unique words divided by total words, averaged for each group
+- **Sentiment**: compound scores from NLTK's VADER, plotted as a distribution for each group
+- **Word associations**: a Word2Vec model (gensim) trained on the emails, used to find the words that appear in similar contexts to "developer"
 
+## Tools
 
-## 🔍 Project Objectives
+Python, pandas, NumPy, matplotlib, NLTK (VADER), gensim
 
-- Clean and prepare the dataset
-- Perform exploratory data analysis (EDA)
-- Identify key patterns, correlations, and anomalies
-- Visualise findings using graphs and charts
-- Provide actionable recommendations based on data
-
-## 🧠 What I Learned
-
-- Data wrangling and preprocessing using pandas
-- Exploratory analysis and data visualisation techniques
-- Drawing business-relevant conclusions from raw data
-- Communicating findings clearly to technical and non-technical audiences
+The dataset (129 labelled emails: 65 rejections, 64 other replies) is included in the repo.
